@@ -17,9 +17,9 @@
 out/
 target/
 # Maven
-.mvn/
-!mvnw
-!mvnw.cmd
+.mvn/*
+!.mvn/wrapper/*
+!.mvn/jvm.config
 
 # Gradle
 .gradle/
