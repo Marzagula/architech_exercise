@@ -1,5 +1,5 @@
 
-# Project Title
+# Architech Exercise
 
 A brief description of what this project does and who it's for
 
@@ -31,7 +31,6 @@ you can do it by opening command line and then use this:
        cd <path to application>/backend/user-registration
 Build the Project: If you are in backend/user-registration directory then you can use Maven to build the backend project:
         
-        mvn -N io.takari:maven:wrapper to download wrapper for maven
        ./mvnw clean install
        (If you're on Windows, use mvnw.cmd instead.)
 
@@ -53,7 +52,7 @@ Install Dependencies: Use npm to install the required packages:
 
 Run the Frontend: Start the Angular development server:
 if you installed or already have Angular globally then use:
-ng serve
+        ng serve
 
 if you installed Angular locally for this project then use:
 
