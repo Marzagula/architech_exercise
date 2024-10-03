@@ -29,7 +29,7 @@ Navigate to the Backend Directory:
 you can do it by opening command line and then use this:
 
        cd <path to application>/backend/user-registration
-Build the Project: If you are in backend/user-registration directory then you can use Maven to build the backend project:
+Build the Project: If you are in **backend/user-registration** directory then you can use Maven to build the backend project:
         
        ./mvnw clean install
        (If you're on Windows, use mvnw.cmd instead.)
@@ -70,3 +70,16 @@ Notes
 
 
 If you went through everything frontend application and backend application should be running and you can use it by going to http://localhost:4200
+
+There are two endpoints:
+
+
+
+       
+       GET /api/v1/users 
+
+Returns a paginated list of users from the database.
+
+       POST /api/v1/users/register
+
+Creates and persists a user from the provided **UserRegistrationDTO** in the request body.
