@@ -57,7 +57,7 @@ ng serve
 
 if you installed Angular locally for this project then use:
 
-npx ng serve
+        npx ng serve
 
 This will compile the Angular application and start a local server, accessible at http://localhost:4200.
 
