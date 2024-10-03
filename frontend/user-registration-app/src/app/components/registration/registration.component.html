@@ -1,0 +1,43 @@
+<div class="formContainer">
+  <form [formGroup]="registerUserForm" (ngSubmit)="onSubmit()" class="registrationForm">
+    <div class="registrationHeader">REGISTER USER</div>
+
+    <div class="registrationForm">
+      <div class="tooltip tooltip-username">
+        <label for="username">USERNAME:</label>
+        <input type="text" id="username" formControlName="username" required/>
+
+        <span class="tooltiptext" [ngClass]="{'visible': username?.invalid && username?.dirty && username?.value.length>0}">
+           Username must be at least 5 characters long and can only contain alphanumeric characters.
+        </span>
+      </div>
+
+      <div class="tooltip tooltip-password">
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" formControlName="password" required/>
+
+        <span class="tooltiptext" [ngClass]="{'visible': password?.invalid && password?.dirty && password?.value.length>0}">
+          Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one number.
+        </span>
+      </div>
+
+      <div class="tooltip tooltip-repeat">
+        <label for="repeatedPassword">REPEAT<br>PASSWORD:</label>
+        <input type="password" id="repeatedPassword" formControlName="repeatedPassword" required/>
+
+        <span class="tooltiptext"
+              [ngClass]="{'visible': registerUserForm.hasError('passwordMismatch') && repeatedPassword?.dirty}">
+          Passwords do not match.
+        </span>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="registerButton button" type="submit" [disabled]="registerUserForm.invalid">Register</button>
+    </div>
+
+    <div class="error" *ngIf="errorMessage.length > 0">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>

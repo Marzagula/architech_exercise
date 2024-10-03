@@ -1,0 +1,59 @@
+# Java / IntelliJ IDEA
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.swp
+*.tmp
+*.hprof
+
+# IntelliJ project files
+.idea/
+*.iml
+out/
+target/
+# Maven
+.mvn/
+!mvnw
+!mvnw.cmd
+pom.xml
+
+# Gradle
+.gradle/
+build/
+!gradlew
+!gradlew.bat
+settings.gradle
+gradle.properties
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Angular / WebStorm
+node_modules/
+dist/
+out-tsc/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+/.angular/
+
+# IDE specific
+*.sublime-workspace
+*.sublime-project
+
+# WebStorm
+.idea/
+*.iml

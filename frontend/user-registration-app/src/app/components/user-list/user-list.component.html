@@ -1,0 +1,25 @@
+<div class="table-container">
+    <table class="user-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Registration Date</th>
+      <th>Last Login Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; let i = index" [ngClass]="{'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0}">
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.registerDate }}</td>
+      <td>{{ user.lastLoginDate | date: 'long' }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <mat-paginator [length]="totalUsers"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>

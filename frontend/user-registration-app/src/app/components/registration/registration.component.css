@@ -1,0 +1,112 @@
+body {
+  font-size: 1rem;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.registrationForm {
+  max-width: 25rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.registrationForm label {
+  margin-top: 1rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.registrationForm input {
+  width: 60%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.registrationHeader {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.registerButton {
+
+}
+
+.registerButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 520px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+  display: none;
+}
+
+.tooltiptext.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-username .tooltiptext {
+  background-color: indianred;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-70%);
+}
+
+.tooltip-password .tooltiptext {
+  background-color: indianred;
+  top: 20%;
+  left: 100%;
+  transform: translateY(-10%);
+}
+
+.tooltip-repeat .tooltiptext {
+  background-color: indianred;
+  top: 45%;
+  left: 100%;
+  transform: translateY(-10%);
+}
+
+.error {
+  background-color: indianred;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
