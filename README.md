@@ -30,14 +30,27 @@ you can do it by opening command line and then use this:
 
        cd <path to application>/backend/user-registration
 Build the Project: If you are in **backend/user-registration** directory then you can use Maven to build the backend project:
+
+Project is using Java 21 so you need at least Maven 3.9 version, you can check maven version by using:
+
+       mvn -version
+
+result should look like this:
+
+       Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+       Maven home: <path to maven>\apache-maven-3.9.9
+       Java version: 21.0.4, vendor: Oracle Corporation, runtime: <path to java>\Java\jdk-21
+       Default locale: pl_PL, platform encoding: UTF-8
+       OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+If version is at least 3.9 and Java 21 then you can build project by using:
         
-       ./mvnw clean install
-       (If you're on Windows, use mvnw.cmd instead.)
+       mvn clean install
 
 Run the Backend: Start the backend server:
        
-       ./mvnw spring-boot:run
-       (Again, use mvnw.cmd on Windows.)
+       mvn spring-boot:run
+
 Frontend Setup (Angular 18)
 Navigate to the Frontend Directory:
 
